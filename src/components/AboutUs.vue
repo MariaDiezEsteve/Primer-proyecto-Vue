@@ -61,7 +61,7 @@
         text: "Esperamos finalizar en julio de 2023",
       }
       const tecnology = ["HTML", "SCSS", "JavaScript", "Vue"];
-      const cities = ["Aspe", "Bakio", "Bilbao", "Sevilla"];
+      const cities = ["Aspe", "Bakio", "Algorta", "Sevilla"];
 
       return { //2. Devolver la variable name para poder llamarla en el template
         name,
