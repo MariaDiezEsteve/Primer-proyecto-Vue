@@ -1,8 +1,8 @@
 <template>
   <h1>Componentes del Grupo:</h1>
   <AboutUs /> <!-- 3. Llamamos al componente aquí para que se muestre en el template HTML -->
-  <ToolsDevelop :editor="editor" :controlVersiones="controlVersiones" :trabajoColaborativo="trabajoColaborativo"/> <!-- PROPS Esta sería la manera de enviar la información del script mediante props al componente hijo ToolsDevelop -->
-  <CounterTimes :getLessData="getLessData" />
+  <ToolsDevelop :editor="editor" :controlVersiones="controlVersiones" :trabajoColaborativo="trabajoColaborativo" /> <!-- PROPS Esta sería la manera de enviar la información del script mediante props al componente hijo ToolsDevelop -->
+  <CounterTimes :getLessData="getLessData" :downOne ="downOne"/>
 
 </template>
 
@@ -24,7 +24,7 @@ components: {
 },
 
 setup(){ // PROPS - Esta información se va a pasar al componente hijo - Tools Develop para que se renderice en ese componente.
-  const editor = " VSCode";
+  const editor = "VSCode";
   const controlVersiones = "GIT";
   const trabajoColaborativo = "Trello";
 
@@ -34,13 +34,12 @@ setup(){ // PROPS - Esta información se va a pasar al componente hijo - Tools D
     downOne.value --;
   }
 
-
-
   return{
     editor,
     controlVersiones,
     trabajoColaborativo,
     getLessData,
+    downOne,
   }
 }
 
