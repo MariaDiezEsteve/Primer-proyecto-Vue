@@ -3,7 +3,7 @@
   <AboutUs /> <!-- 3. Llamamos al componente aquí para que se muestre en el template HTML -->
   <ToolsDevelop :editor="editor" :controlVersiones="controlVersiones" :trabajoColaborativo="trabajoColaborativo" /> <!-- PROPS Esta sería la manera de enviar la información del script mediante props al componente hijo ToolsDevelop -->
   <CounterTimes :getLessData="getLessData" :downOne ="downOne"/>
-
+  <BoostrapInfo />
 </template>
 
 <script>
@@ -13,6 +13,7 @@
 import AboutUs from './components/AboutUs' // 1. Importamos nuestro componente para poder llamarlo en el export y Template
 import ToolsDevelop from './components/ToolsDevelop.vue'; 
 import CounterTimes from './components/CounterTimes.vue';
+import BoostrapInfo from './components/BoostrapInfo.vue';
 
 import {ref} from "vue";
 
@@ -21,6 +22,7 @@ components: {
   AboutUs, // 2. Exportamos nuestro componente para poder utilizarlo en la parte de Template
   ToolsDevelop,
   CounterTimes,
+  BoostrapInfo,
 },
 
 setup(){ // PROPS - Esta información se va a pasar al componente hijo - Tools Develop para que se renderice en ese componente.

@@ -9,7 +9,7 @@
     export default {
     props: {
         getLessData: Function,
-        downOne: Number,+
+        downOne: Number,
     },
         setup(props){
 

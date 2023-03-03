@@ -4,10 +4,20 @@
   <img src="../assets/avatar2.png" alt="Avatar 2">
   <img src="../assets/avatar3.png" alt="Avatar 3">
   <img src="../assets/avatar4.png" alt="Avatar 4">
+
+  <h4>{{ mensaje }}</h4>
 </template>
 
 <script>
 export default {
+  setup(){
+    const mensaje = "Hello World";
+    
+    return {
+      mensaje,
+    }
+  }
+ 
 
 }
 </script>
